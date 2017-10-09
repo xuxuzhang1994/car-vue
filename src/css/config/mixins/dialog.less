@@ -1,0 +1,58 @@
+.dialog-box {
+  line-height: 1;
+  text-align: center;
+  .dialog-main{
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 16/100rem;
+  .dialog-content {
+    position: relative;
+    padding: 36/100rem 50/100rem 0/100rem 50/100rem;
+    .dialog-title {
+      position: relative;
+      font-size: 32/100rem;
+      color: #222222;
+    }
+    .dialog-message {
+      position: relative;
+      font-size: 28/100rem;
+      color: #555555;
+      margin-top: 24/100rem;
+      margin-bottom: 36/100rem;
+      line-height: 1.3;
+    }
+    .dialog-no-title{
+      height: 24/100rem;
+    }
+  }
+  .dialog-btn-box {
+    position: relative;
+    height: 80/100rem;
+    line-height: 80/100rem;
+    &:before{
+      .Pseudo-border-before();
+    }
+    .dialog-btn {
+      display: inline-block;
+      color: #469AFF;
+      font-size: 28/100rem;
+      float: left;
+    }
+    .btn-one {
+      .dialog-btn {
+        width: 100%;
+      }
+    }
+    .btn-two {
+      .dialog-btn {
+        width: 50%;
+      }
+      .btn-left {
+        border-right: 0.5px solid #ddd;
+        width: 50%;
+        color: #555555;
+      }
+    }
+  }
+  }
+}

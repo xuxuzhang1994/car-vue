@@ -1,0 +1,477 @@
+
+//表单提交
+.form-template{
+  position: relative;
+  font-size: 28/100rem;
+  font-family: "Microsoft YaHei UI";
+  .form-cells{
+    position: relative;
+    margin-top: 20/100rem;
+    background: #FFFFFF;
+  }
+  .form-cells:first-child{
+    margin-top: 0/100rem;
+  }
+  .form-cells-m-t-none{
+    margin-top: 0;
+  }
+  .form-cells-b-t{
+    &:before{
+      .Pseudo-border-before();
+    }
+  }
+
+
+  .from-other{
+    position: relative;
+    top: 10/100rem;
+    padding-right: 20/100rem;
+    margin-left: 20/100rem;
+    font-size: 24/100rem;
+    color: #999999;
+    line-height: 36/100rem;
+    padding-bottom: 10/100rem;
+  }
+
+  .form-cell{
+    position: relative;
+    padding: 27/100rem 0;
+    padding-right: 20/100rem;
+    margin-left: 20/100rem;
+    clear:both;
+    overflow: hidden;
+    &:after{
+      .Pseudo-border-after();
+    }
+  }
+  .form-cell:last-child{
+    &:after{
+      height: 0;
+    }
+  }
+  .form-cell-title{
+    float: left;
+    width: 200/100rem;
+    color: #222222;
+    .list-must{
+      width: 20/100rem;
+      text-align: center;
+    }
+    .list-must:before {
+      content: "\e67a";
+      font-size: 12/100rem;
+      -webkit-text-size-adjust:none;
+      color: #ff5757;
+      vertical-align: middle;
+    }
+
+  }
+  .form-cell-content{
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+  .form-cell-title + .form-cell-content{
+    margin-left: 200/100rem;
+    position: relative;
+    top: 0;
+    width:auto;
+  }
+  //输入内容部分
+  .form-control{
+    padding: 0;
+    font-size: 28/100rem;
+  }
+  .form-control input{
+    display: block;
+    color:#555555;
+    width: 100%;
+    padding: 0;
+    font-size: 28/100rem;
+    font-family: "Microsoft YaHei UI";
+    border: none;
+    outline: none;
+  }
+  ::-webkit-input-placeholder { /* WebKit browsers */
+    color: #999;
+  }
+  .form-control textarea{
+    resize: none;
+    display: block;
+    width: 100%;
+    //height:130/100rem;
+    height:130/100rem;
+    color: #555555;
+    padding: 0;
+    font-size: 28/100rem;
+    font-family: "Microsoft YaHei UI";
+    border: none;
+    outline: none;
+    word-break: break-all;
+    word-wrap: break-word;
+    line-height: 1.5 !important;
+  }
+  .form-text-tip{
+    height: 40/100rem;
+    text-align: right;
+    line-height: 40/100rem;
+    font-size: 10/100rem;
+  }
+
+  .form-cell-vertical{
+    position: relative;
+    padding-right: 20/100rem;
+    margin-left: 20/100rem;
+    padding-bottom: 20/100rem;
+    clear:both;
+    overflow: hidden;
+    &:after{
+      .Pseudo-border-after();
+    }
+    .form-cell-title{
+      position: relative;
+      top: 0;
+      width: 100%;
+      height: 88/100rem;
+      line-height: 88/100rem;
+    }
+    .form-cell-content{
+      position: relative;
+      top: 0;
+      width: 100%;
+    }
+    .form-cell-title + .form-cell-content{
+      margin: 0;
+      position: relative;
+      top: -0.10rem;
+      width:auto;
+    }
+  }
+  .form-cell-vertical:last-child{
+    &:after{
+      height: 0;
+    }
+  }
+
+  .cell-pt-0{
+    padding-top: 0;
+  }
+  .cell-pb-0{
+    padding-bottom: 0;
+  }
+
+  //选择部分部分
+  .form-select{
+    position: relative;
+    .select-key{
+      position: absolute;
+      width: 100%;
+      top: 0;
+      opacity: 0;
+      z-index: 1;
+      border: 1px solid red;
+    }
+    .select-value{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      font-size: 28/100rem;
+      color: #555555;
+      line-height: initial;
+      span{
+        font-family: "Microsoft YaHei UI" !important;
+        -webkit-text-stroke-width: 0px;
+      }
+    }
+    input{
+      float: left;
+      display:inline-block;
+      color:#555555;
+      width: auto;
+      padding: 0;
+      font-size: 28/100rem;
+      font-family: "Microsoft YaHei UI";
+      border: none;
+      outline: none;
+      height: 36/100rem;
+    }
+    select{
+      display:inline-block;
+      color:#555555;
+      width: 100%;
+      padding: 0;
+      font-size: 28/100rem;
+      font-family: "Microsoft YaHei UI";
+      border: none;
+      outline: none;
+      height: 36/100rem;
+    }
+    option{
+      text-align: center;
+    }
+    .select{width: 100%;}
+    .placeholder{color: #999999;font-size: 28/100rem;font-family: "Microsoft YaHei UI" !important;-webkit-text-stroke-width: 0px;}
+  }
+  .form-img{
+    clear: both;
+    margin-left: -10/100rem;
+    margin-top: -10/100rem;
+    .img-item{
+      float: left;
+      position: relative;
+      width: 142/100rem;
+      height: 142/100rem;
+      margin-left: 10/100rem;
+      margin-top: 10/100rem;
+      img{
+        position: absolute;
+        border-radius: 8/100rem;
+      }
+      .delete{
+        position: absolute;
+        right: -5/100rem;
+        top: -5/100rem;
+        z-index: 1;
+        line-height: 1;
+        width: 20/100rem;
+        height: 20/100rem;
+      }
+    }
+    .add-img{
+      border: 1px dashed #dddddd;
+      float: left;
+      position: relative;
+      width: 142/100rem;
+      height: 142/100rem;
+      line-height: 142/100rem;
+      text-align: center;
+      margin-left: 10/100rem;
+      margin-top: 10/100rem;
+      border-radius: 8/100rem;
+      .upload{
+        font-size: 44/100rem;
+        color: #999999;
+        &:before { content: "\e696"; }
+      }
+    }
+  }
+  .from-switch{
+    position: absolute;
+    right: 0;
+    top: -0.06rem;
+  }
+  //switch按钮
+  .label-switch {
+    display: inline-block;
+    vertical-align: middle;
+    width: 82/100rem;
+    border-radius: 25/100rem;
+    box-sizing: border-box;
+    height: 50/100rem;
+    position: relative;
+    cursor: pointer;
+    -ms-flex-item-align: center;
+    -webkit-align-self: center;
+    align-self: center;
+    input[type="checkbox"] {
+      display: none;
+    }
+    .checkbox {
+      width: 82/100rem;
+      border-radius: 25/100rem;
+      box-sizing: border-box;
+      height: 50/100rem;
+      background: #e5e5e5;
+      z-index: 0;
+      margin: 0;
+      padding: 0;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      appearance: none;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      -webkit-transition-duration: 300ms;
+      transition-duration: 300ms;
+    }
+    .checkbox:before {
+      content: ' ';
+      position: absolute;
+      left: 2/100rem;
+      top: 0/100rem;
+      width: 82/100rem;
+      border-radius: 25/100rem;
+      box-sizing: border-box;
+      height: 50/100rem;
+      background: #ffffff;
+      z-index: 1;
+      -webkit-transition-duration: 300ms;
+      transition-duration: 300ms;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      border: 1px solid #dddddd;
+    }
+    .checkbox:after {
+      content: ' ';
+      height: 45/100rem;
+      width: 45/100rem;
+      border-radius: 28px;
+      background: #fff;
+      position: absolute;
+      z-index: 2;
+      top: 2/100rem;
+      left: 2/100rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+      -webkit-transform: translateX(0px);
+      transform: translateX(0px);
+      -webkit-transition-duration: 300ms;
+      transition-duration: 300ms;
+    }
+    input[type="checkbox"]:checked + .checkbox {
+      background: #469aff;
+    }
+    input[type="checkbox"]:checked + .checkbox:before {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
+    input[type="checkbox"]:checked + .checkbox:after {
+      -webkit-transform: translateX(33/100rem);
+      transform: translateX(33/100rem);
+    }
+  }
+  //选人icon
+  .choose{
+    color: #469aff;
+    font-family: "iconfont" !important;
+    font-size: @font-size-base;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    &:before{
+      content: "\e67b";
+      position: absolute;
+      right: 0;
+      font-size: 30/100rem;
+      top:0/100rem;
+    }
+  }
+  .form-text-color-red{
+    color: #ff5757;
+  }
+  .right-arrow{
+    color: #DDDDDD;
+    font-family: "iconfont" !important;
+    font-size: @font-size-base;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    &:after{
+      content: "\e6aa";
+      position: absolute;
+      right: 0;
+      font-size: 22/100rem;
+      top:6/100rem;
+    }
+  }
+
+  //文字截取
+  .text-hidden{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  //数据正确错误判断
+  .form-error{
+    position: absolute;
+    right: 0;
+    top:-2/100rem;
+    .iconfont{
+      font-size: 24/100rem;
+      color:#fd6464;
+    }
+  }
+  .form-success{
+    position: absolute;
+    right: 0;
+    top:-2/100rem;
+    .iconfont{
+      font-size: 24/100rem;
+      color:#53c747;
+    }
+  }
+
+  //获取验证按钮
+  .form-phone-btn{
+    width:130/100rem;
+    height: 50/100rem;
+    line-height: 46/100rem;
+    font-size: 24/100rem;
+    border-radius: 4/100rem;
+    position: absolute;
+    right: 0;
+    top:-8/100rem;
+    text-align: center;
+  }
+  .form-phone-btn-start{
+    border: 1px solid #469aff;
+    color: #469aff;
+  }
+  .form-phone-btn-done{
+    border: 1px solid #DDDDDD;
+    color: #555555;
+    background: #DDDDDD;
+  }
+
+  //获取验证码
+  .form-validate-img{
+    width:130/100rem;
+    height: 50/100rem;
+    line-height: 46/100rem;
+    font-size: 24/100rem;
+    border-radius: 10/100rem;
+    position: absolute;
+    right: 0;
+    top:-8/100rem;
+    text-align: center;
+    display: inline-block;
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 10/100rem;
+    }
+  }
+
+  .label-radio{
+    width: 100%;
+    display: block;
+    background: red;
+    .label-icon{
+      float: left;
+    }
+    .icon-radio{
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+    .font-size-radio{
+      font-size: 32/100rem;
+      color: #999999;
+
+    }
+    .icon-radio-no:before{content: '\e758'}
+    .icon-sousuo_:before{content: '\e774'}
+
+    .label-title{
+      float: left;
+    }
+
+  }
+}
+.form-template-spec{
+  padding-bottom: 0;
+}

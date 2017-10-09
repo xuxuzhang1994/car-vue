@@ -1,0 +1,116 @@
+@import "../../../css/config/variables";
+@import "../../../css/config/mixins/border";
+.maintenance-feedback {
+  //页面样式
+  @font-family-default: "Microsoft YaHei UI" !important;
+  font-family: @font-family-default;
+  min-height: 100vh;
+  background: #fff;
+  header{
+    width: 100%;
+    padding: 60/100rem 0;
+    text-align: center;
+    line-height: 1;
+    img{
+      width: 150/100rem;
+      height: 150/100rem;
+    }
+    .title-cn{
+      margin-top: 40/100rem;
+      margin-bottom: 19/100rem;
+    }
+
+  }
+  .focus{
+    &:after {
+      background: #FFD301 !important;
+    }
+  }
+  section{
+    padding: 0 30/100rem;
+    overflow: hidden;
+    .feedback-content{
+      padding: 20/100rem 0 15/100rem 0;
+      position: relative;
+      line-height: 1;
+      &:after {
+        .Pseudo-border-after();
+      }
+      .input{
+        margin-top: 30/100rem;
+        overflow: auto;
+      }
+      textarea{
+        float: left;
+        width: 100%;
+        line-height: 0.34rem;
+        height: 0.34rem;
+        &:focus{
+          color: #FFD301 !important;
+        }
+      }
+      textarea:focus{
+        color: #FFD301;
+      }
+      textarea { -webkit-appearance:none;
+        border-radius:0;}
+    }
+    .feedback-img{
+      margin-top: 30/100rem;
+      padding: 20/100rem 0;
+      line-height: 1;
+    }
+    .imgbox{
+      margin-top: 30/100rem;
+      div{
+        float: left;
+        margin-right: 10/100rem;
+        margin-bottom: 10/100rem;
+        width: 137/100rem;
+        height: 137/100rem;
+      }
+      .item{
+        position: relative;
+        i{
+          opacity: 0.4;
+          position: absolute;
+          top: -4/100rem;
+          right: -4/100rem;
+        }
+        img{
+          width: 137/100rem;
+          height: 137/100rem;
+        }
+      }
+      .item:nth-child(4n){
+        margin-right: 0;
+      }
+
+      .upload{
+        position: relative;
+        width: 137/100rem;
+        height: 137/100rem;
+        line-height: 137/100rem;
+        text-align: center;
+        &:after{
+          .Pseudo-btnBorder-after(@border-width:1px 1px 1px 1px,@border-color: #eee,@border-style: solid,@radius:8/100rem );
+        }
+        i{
+          font-size: 55/100rem;
+        }
+      }
+    }
+  }
+  footer{
+    padding: 60/100rem 20/100rem 20/100rem 20/100rem;
+    .submit{
+      height: 80/100rem;
+      line-height: 80/100rem;
+      color: #fff;
+      background: #dd1d21;
+      text-align: center;
+      border-radius: 100px;
+      font-size: 307/1000rem;
+    }
+  }
+}

@@ -1,0 +1,271 @@
+@import "../glyphicons.less";
+@import "./base.less";
+@import "../config/mixins/border.less";
+@import "../config/mixins/border-radius.less";
+@import "../config/mixins/clearfix.less";
+@import "../config/mixins/default.less";
+@import "../config/mixins/dialog.less";
+@import "../config/mixins/flex.less";
+@import "../config/mixins/form-template.less";
+@import "../config/mixins/opacity.less";
+@import "../config/mixins/text-overflow.less";
+
+
+//此less文件专门写一些全局的公用的样式，提供一些好用的'工具',又名工具less文件，比如浮动啊，省略号啊等等等，以后有的话还可以继续添加。
+
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+
+//清除浮动类
+.clearfix {
+  .clearfix();
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+
+//加上省略号...
+.ellipsis {
+  .text-overflow();
+}
+
+//Force Line Break
+.word-break {
+  word-break:break-all;
+  word-wrap:break-word;
+  white-space: normal;
+}
+
+//防止文字换行
+.nowrap {
+  word-break:normal;
+  word-wrap:normal;
+  white-space: nowrap;
+}
+
+// Alignment
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+.text-justify        { text-align: justify; }
+.text-nowrap         { white-space: nowrap; }
+.vertical-top        { vertical-align: top; }
+.vertical-middle     { vertical-align: middle; }
+.vertical-bottom     { vertical-align: bottom; }
+
+.line-height-1 {
+  line-height:1;
+}
+.font-size-0 {
+  font-size :0;
+}
+.cursor-pointer {
+  cursor :pointer;
+}
+
+.opacity-0 {
+  .opacity(0);
+  .pointer-events(none);
+  cursor: default;
+  .user-select(none);
+}
+.opacity-0:hover {
+  cursor: default;
+}
+/*flex布局公共*/
+.flex{
+  .display-flex();
+}
+
+.flex-number-loop(6); //  生成 .flex-1 ~ .flex-6
+
+//定位
+.position-relative{
+  position:relative;
+}
+.position-absolute{
+  position:absolute;
+}
+.position-fixed{
+  position:fixed;
+}
+
+//字体颜色
+/* color */
+.color-main{
+  color:@status-bule !important;
+}
+
+.color-light{
+  color: @gray-light !important;
+}
+
+.color-gray{
+  color:@gray !important
+}
+
+.color-yellowo{
+  color: @status-yellow !important;
+}
+
+.color-green{
+  color:@success !important;
+}
+
+.color-red{
+  color:@status-red !important;
+}
+.color-gray2{
+  color:@gery-2 !important;
+}
+.color-gray3{
+  color:@gray-darkest !important;
+}
+.color-gray5{
+  color:@gery-5 !important;
+}
+.color-gray9{
+  color:@gery-9 !important;
+}
+.color-gray0{
+  color:@gery-0 !important;
+}
+.color-grayD{
+  color:@gery-d !important;
+}
+.color-grayC{
+  color:@gery-c !important;
+}
+.color-grayE{
+  color: @gray-lighter !important;
+}
+.color-grayF4{
+  color: @body-background !important;
+}
+.color-white{
+  color: @body-bg !important;
+}
+.color-black{
+  color: @gray-base !important;
+}
+
+/* =============
+   Helper clasess
+============= */
+.p-0 {
+  padding: 0/100rem !important;
+}
+.p-20 {
+  padding: 20/100rem !important;
+}
+.p-30 {
+  padding: 30/100rem !important;
+}
+.p-l-0 {
+  padding-left: 0/100rem !important;
+}
+.p-r-0 {
+  padding-right: 0/100rem !important;
+}
+.p-t-0 {
+  padding-top: 0/100rem !important;
+}
+.p-t-10 {
+  padding-top: 10/100rem !important;
+}
+.p-b-10 {
+  padding-bottom: 10/100rem !important;
+}
+.p-l-r-10 {
+  padding-left: 10/100rem;
+  padding-right: 10/100rem;
+}
+.m-0 {
+  margin: 0/100rem !important;
+}
+.m-r-5 {
+  margin-right: 5/100rem !important;
+}
+.m-r-10 {
+  margin-right: 10/100rem !important;
+}
+.m-r-15 {
+  margin-right: 15/100rem !important;
+}
+.m-r-20 {
+  margin-right: 20/100rem !important;
+}
+.m-l-5 {
+  margin-left: 5/100rem !important;
+}
+.m-l-10 {
+  margin-left: 10/100rem !important;
+}
+.m-l-15 {
+  margin-left: 15/100rem !important;
+}
+.m-l-20 {
+  margin-left: 20/100rem !important;
+}
+.m-l-30 {
+  margin-left: 30/100rem !important;
+}
+.m-t-5 {
+  margin-top: 5/100rem !important;
+}
+.m-t-0 {
+  margin-top: 0/100rem !important;
+}
+.m-t-10 {
+  margin-top: 10/100rem !important;
+}
+.m-t-15 {
+  margin-top: 15/100rem !important;
+}
+.m-t-20 {
+  margin-top: 20/100rem !important;
+}
+.m-t-30 {
+  margin-top: 30/100rem !important;
+}
+.m-t-40 {
+  margin-top: 40/100rem !important;
+}
+.m-b-0 {
+  margin-bottom: 0/100rem !important;
+}
+.m-b-5 {
+  margin-bottom: 5/100rem !important;
+}
+.m-b-10 {
+  margin-bottom: 10/100rem !important;
+}
+.m-b-15 {
+  margin-bottom: 15/100rem !important;
+}
+.m-b-20 {
+  margin-bottom: 20/100rem !important;
+}
+.m-b-30 {
+  margin-bottom: 30/100rem !important;
+}
+
+//

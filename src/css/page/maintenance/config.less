@@ -1,0 +1,94 @@
+@import "../../../css/config/variables";
+@import "../../../css/config/mixins/border";
+
+.maintenance-config {
+  //页面样式
+  @font-family-default: "Microsoft YaHei UI" !important;
+  font-family: @font-family-default;
+  background: #fff;
+  overflow: hidden;
+  padding: 20/100rem;
+  header{
+    position: relative;
+    padding: 30/100rem;
+    line-height: 1;
+    box-shadow: 0 0 20/100rem  #ccd5e0;
+    border-radius: 8/100rem;
+    .brand{
+      position: relative;
+      overflow: hidden;
+      img{
+        float: left;
+        width: 70/100rem;
+        margin-right: 15/100rem;
+        margin-top: -6/100rem;
+      }
+      .left{
+        font-size: 19px;
+        padding-bottom: 20/100rem;
+        position: relative;
+        float: left;
+        &:after{
+          content: '';
+          position: absolute;
+          bottom:0;
+          background: #dd1d21;
+          height: 3/100rem;
+          width: 22/100rem;
+          left: 0;
+        }
+      }
+      .right{
+        position: absolute;
+        right: 0;
+        top:0;
+        img{
+          width: 110/100rem;
+          height: 110/100rem;
+          border-radius: 8/100rem;
+        }
+      }
+    }
+    .type{
+      margin-top: 70/100rem;
+    }
+    &:after {
+      .Pseudo-btnBorder-after(@border-width:1px 1px 1px 1px,@border-color: @hr-border-color,@border-style: solid,@radius:8px);
+    }
+  }
+  section{
+    position: relative;
+    margin-top: 20/100rem;
+    padding: 35/100rem 0 5/100rem 0;
+    box-shadow: 0 0 20/100rem  #ccd5e0;
+    border-radius: 8/100rem;
+    &:after {
+      .Pseudo-btnBorder-after(@border-width:1px 1px 1px 1px,@border-color: @hr-border-color,@border-style: solid,@radius:8px);
+    }
+    ul{
+      li{
+        margin-bottom: 30/100rem;
+        .left{
+          width: 180/100rem;
+          padding-left: 30/100rem;
+        }
+        .right{
+          flex-grow: 1;
+          text-align: left;
+        }
+      }
+    }
+  }
+  footer{
+    margin-top: 60/100rem;
+    .back{
+      background: #dd1d21;
+      height: 80/100rem;
+      line-height: 80/100rem;
+      text-align: center;
+      border-radius: 100px;
+      color: #fff;
+      font-size: 307/1000rem;
+    }
+  }
+}

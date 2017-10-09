@@ -1,0 +1,420 @@
+.home {
+  @import "../../../css/config/variables";
+  @import "../../../css/config/mixins/border";
+  @font-family-default: "Microsoft YaHei UI" !important;
+  font-family: @font-family-default;
+  position: relative;
+  background: #FFD301;
+  //页面样式
+
+  .p-t-9{
+    padding-top: 0.96rem;
+  }
+  .main{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    background: #FFD301;
+  }
+  .header {
+    overflow: hidden;
+    background: #FFD301;
+    background-size: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding:0 20/100rem;
+    height: 86/100rem;
+    align-items: center;
+    z-index: 2;
+    @diff:.67rem;
+    .searchBox{
+      background: #fff;
+      height: 56/100rem;
+      padding:0 20/100rem;
+      align-items: center;
+      color: #ddd;
+      border-radius:100px;
+      flex-grow: 1;
+      margin-right: 30/100rem;
+      line-height:1;
+      span{
+        margin-left: 15/100rem;
+        width:calc(~"100% - @{diff}") ;
+      }
+      i{
+
+      }
+    }
+    .feedback{
+      margin-top: 0.05rem;
+
+      float: right;
+      text-align: center;
+      line-height: 1;
+      span{
+        color: #fff;
+        line-height: 1;
+        display: block;
+        margin-top: 8/100rem;
+      }
+      i{
+        color: #fff;
+        line-height: 1;
+        display: block;
+      }
+    }
+  }
+  .mask {
+    position: fixed;
+    top: 0;
+    height: calc(~"100% - @{changeTime}") ;
+    left: 0;
+    right: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 3;
+  }
+  .searchPage {
+    min-height: 100vh;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: -1;
+    background: #fff;
+    .search-default {
+
+      .searchBox {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 16/100rem 20/100rem;
+        align-items: center;
+        background: #FFD301;
+        &:after {
+          .Pseudo-border-after();
+        }
+        .back{
+          color: #fff;
+          margin-right: 15/100rem;
+        }
+        span {
+          margin-left: 20/100rem;
+          color: #fff;
+        }
+      }
+      .search {
+        background: #fff;
+        border-radius: 50px;
+        flex-grow: 1;
+        height: 56/100rem;
+        line-height: 56/100rem;
+        padding: 0/100rem 20/100rem;
+        justify-content: space-around;
+        align-items: center;
+        input{
+          width: 100%;
+          float: left;
+          background: none;
+          margin-left: 0.15rem;
+          margin-top: -5/100rem;
+        }
+      }
+      .search-icon {
+        float: left;
+      }
+      .placeholder {
+        margin-left: 16/100rem;
+      }
+      p {
+        padding: 40/100rem 30/100rem;
+        color: #222;
+      }
+
+      .result {
+        padding-left: 20/100rem;
+        ul {
+          li {
+            height: 88/100rem;
+            line-height: 88/100rem;
+            position: relative;
+            color: #555;
+            align-items: center;
+            .img{
+              width: 0.46rem;
+              height: 0.46rem;
+              float: left;
+              position: relative;
+              margin-right: 15/100rem;
+              img{
+                position: absolute;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+              }
+            }
+
+            &:after {
+              .Pseudo-border-after();
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  .content {
+    .hot {
+      margin:0 15/100rem 25/100rem 15/100rem;
+      overflow: hidden;
+      background: #fff;
+      padding:0 0 40/100rem 0;
+      border-radius: 8/100rem;
+      .title {
+        margin-top: 30/100rem ;
+        padding-left: 30/100rem ;
+        line-height: 1;
+      }
+      .brand {
+        width: 100%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .column{
+        width: 100%;
+      }
+      .hot-brand {
+        float: left;
+        margin-top: 30/100rem;
+        width: 20%;
+        text-align: center;
+        .brand-logo {
+          width: auto;
+          height: 70/100rem;
+          border-radius: 100%;
+          img {
+            height: 100%;
+            border-radius: 100%;
+          }
+        }
+        .brand-name {
+          text-align: center;
+          margin-top: 15/100rem;
+          line-height: 1;
+        }
+      }
+      //.hot-brand:nth-child(5n) {
+      //  margin-right: 0;
+      //}
+    }
+    .brand-list {
+      background: #fff;
+      border-radius: 40/100rem 40/100rem 0 0;
+      padding-top: 15/100rem;
+      .brand-item {
+        position: relative;
+        padding-top: 25/100rem;
+        .item-title {
+          position: relative;
+          padding:0 30/100rem 15/100rem 30/100rem;
+          line-height: 1;
+          color: #FFD301;
+          &:after {
+            .Pseudo-border-after();
+            background: #e5e5e5;
+          }
+        }
+        //.item-title:before {
+        //  content: '';
+        //  height: 16/100rem;
+        //  width: 4/100rem;
+        //
+        //  display: inline-block;
+        //  background: #ffd259;
+        //}
+        .item-detail {
+          overflow: hidden;
+          align-items: center;
+          padding-left: 30/100rem;
+          img {
+            width: 46/100rem;
+          }
+          .name {
+            position: relative;
+            float: left;
+            margin-left: 15/100rem;
+            line-height: 0.76rem;
+            width: 100%;
+            height: 0.76rem;
+            &:after {
+            .Pseudo-border-after();
+            }
+            span{
+              float: left;
+              width: 70%;
+            }
+          }
+          .border-bottom{
+            position: relative;
+            &:after {
+              .Pseudo-border-after();
+            }
+          }
+        }
+      }
+
+    }
+
+  }
+  .nav-bar {
+    position: fixed;
+    right: 20/100rem;
+    top:3rem;
+    color: #a2aab6;
+    .nav-item-active{
+      background: #dd1d21 !important;
+      color: #fff !important;
+      background-clip: padding-box;
+    }
+    .nav-item {
+      color: #a2aab6;
+      margin-top: 4/100rem ;
+      text-align: center;
+      position: relative;
+      width: 14px;
+      height: 14px;
+      line-height: 14px;
+      border-radius: 14px;
+      .indexes{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+      }
+      .bubble{
+        width: 35px;
+        height: 35px;
+        color: #fff;
+        background: #FFD301;
+        position: absolute;
+        left: -100/100rem;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 35px;
+        top:50%;
+        transform: translateY(-50%);
+        display: none;
+      }
+      .bubble:after{
+        // background: #FFD301;
+        content: '';
+        height: 0/100rem;
+        width: 0/100rem;
+        display: block;
+        position: absolute;
+        right: -0.08rem;
+        top:50%;
+        transform: translateY(-50%);
+        border-width:10/100rem 0 10/100rem 10/100rem;
+        border-style:solid;
+        border-color:transparent transparent transparent #FFD301;/*透明 透明 透明 黄*/
+        position:absolute;
+      }
+    }
+  }
+  .active {
+    color: #fed163;
+  }
+  @changeTime:693/100rem;
+  .changeTime {
+    z-index: 10;
+    background: #fff;
+    padding: 0 20/100rem;
+    color: #555;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: @changeTime;
+    opacity:0.8;
+    overflow: scroll;
+
+    .car-name {
+      min-height: 70/100rem;
+      line-height: 70/100rem;
+      position: relative;
+      img{
+        width: 0.26rem;
+        float: left;
+        position: absolute;
+        top: 50%;
+        margin-top: -0.13rem;
+      }
+      .text{
+        margin-left: 36/100rem;
+      }
+      .ddid21{
+        color: #dd1d21;
+      }
+      .icon-arrowR{
+        margin:0 15/100rem ;
+      }
+      .close{
+        float: right;
+      }
+      &:after {
+        .Pseudo-border-after();
+      }
+      .img {
+        width: 46/100rem;
+        height: 46/100rem;
+        display: flex;
+        align-items: center;
+        img {
+          width: 46/100rem;
+          margin-top: 2/100rem;
+        }
+      }
+    }
+    .car-time {
+      .time-item {
+        min-height: 88/100rem;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        &:after {
+          .Pseudo-border-after();
+        }
+        span{
+          float: left;
+        }
+        i{
+          float: right;
+        }
+      }
+      .time-item:nth-last-child(1){
+        &:after {
+          height: 0;
+        }
+      }
+    }
+  }
+  .last-no-bd{
+    &:after{
+      height: 0 !important;
+    }
+  }
+  .filter{
+    filter:blur(15/100rem);
+    z-index: -1;
+  }
+  .opacity{
+    opacity:0.8 ;
+    z-index: 5;
+  }
+  .hide222{
+    filter:blur(15/100rem);
+  }
+}

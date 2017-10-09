@@ -1,0 +1,258 @@
+@import "reset.less";
+
+/*
+ 增加不常规字体方案：一个参数的是正常比例换算方式
+ floor--像下取整
+ 如：
+ .font-responsive(40)
+ 结果：
+ .font-40{
+    font-size: 40px;
+ }
+ @media screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    .font-40{
+      font-size: 46px;
+    }
+  }
+
+  @media screen and (min-device-width: 414px){
+    .font-40{
+      font-size: 51px;
+    }
+  }
+ */
+.font-responsive(@size){
+    .font-@{size}{
+        font-size: @size *1px;
+    }
+    @media screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        .font-@{size}{
+            font-size: floor(@size * 1.17px);
+        }
+    }
+
+    @media screen and (min-device-width: 414px){
+        .font-@{size}{
+            font-size: floor(@size * 1.29px);
+        }
+    }
+}
+
+/*
+ 增加不常规字体方案：三个参数的是媒体查询已输出的值为准
+ 如：
+ .font-responsive(40,20,30)
+ 结果:
+ .font-40{
+  font-size: 40px;
+ }
+ @media screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    .font-40{
+      font-size: 20px;
+    }
+  }
+  @media screen and (min-device-width: 414px){
+    .font-40{
+      font-size: 30px;
+    }
+  }
+*/
+.font-responsive(@size, @min-size, @max-size){
+    .font-@{size}{
+        font-size: @size *1px;
+    }
+    @media screen and (min-device-width: 375px) and (max-device-width: 413px) {
+        .font-@{size}{
+            font-size: @min-size * 1px;
+        }
+    }
+
+    @media screen and (min-device-width: 414px){
+        .font-@{size}{
+            font-size: @max-size * 1px;
+        }
+    }
+}
+
+html {
+    font-size: @font-size-base;
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+body {
+    position: relative;
+    font: @font-size-base @font-family-sans-serif;
+    background-color: @body-background;
+    .tap-highlight-color(rgba(0, 0, 0, 0));
+    .overflow-scrolling(touch);
+    overflow-x: hidden;
+    height: 100%;
+    font-size: 0;
+}
+a:active {
+    color: #fff;
+}
+a.link:active {
+    color: #999;
+}
+body {font-size: @font-size-base;}
+.font-36,h1, .h1{
+    font-size: 36px;
+}
+.font-32{
+    font-size: 32px;
+}
+.font-30,h2, .h2{
+    font-size: 30px ;
+}
+.font-24,h3, .h3{
+    font-size: 24px ;
+}
+.font-20{
+    font-size: 20px ;
+}
+.font-18,h4, .h4{
+    font-size: 18px ;
+}
+.font-17{
+    font-size: 17px ;
+}
+.font-16{
+    font-size: 16px ;
+}
+.font-15,h5, .h5{
+    font-size: 15px ;
+}
+.font-14{
+    font-size: 14px ;
+}
+.font-13{
+    font-size: 13px ;
+}
+.font-12,h6, .h6{
+    font-size: 12px ;
+}
+.font-11{
+    font-size: 11px ;
+}
+.font-10{
+    font-size: 10px ;
+}
+.font-9{
+    font-size: 9px ;
+}
+.font-8{
+    font-size: 8px ;
+}
+
+@media screen and (min-device-width: 375px) and (max-device-width: 413px) {
+    body { font-size: @font-size-base + 1; }
+    .font-36,h1, .h1{
+        font-size: 42px;
+    }
+    .font-32{
+        font-size: 37px;
+    }
+    .font-30,h2, .h2{
+        font-size: 35px;
+    }
+    .font-24,h3, .h3{
+        font-size: 28px;
+    }
+    .font-20{
+        font-size: 23px;
+    }
+    .font-18,h4, .h4 {
+        font-size: 21px;
+    }
+    .icon-leave.font-18{
+        font-size: 23px;
+    }
+    .font-17{
+        font-size: 19px;
+    }
+    .font-16{
+        font-size: 18px;
+    }
+    .font-15,h5, .h5{
+        font-size: 17px;
+    }
+    .font-14{
+        font-size: 16px;
+    }
+    .font-13{
+        font-size: 15px;
+    }
+    .font-12,h6, .h6{
+        font-size: 14px;
+    }
+    .font-11{
+        font-size: 12px;
+    }
+    .font-10{
+        font-size: 11px;
+    }
+    .font-9{
+        font-size: 10px;
+    }
+    .font-8{
+        font-size: 9px;
+    }
+}
+@media screen and (min-device-width: 414px){
+    body { font-size: @font-size-base + 2; }
+    .font-36,h1, .h1{
+        font-size: 46px;
+    }
+    .font-32{
+        font-size: 40px;
+    }
+    .font-30,h2, .h2{
+        font-size: 38px;
+    }
+    .font-24,h3, .h3{
+        font-size: 30px;
+    }
+    .font-20{
+      font-size: 25px;
+    }
+    .font-18,h4, .h4 {
+        font-size: 23px;
+    }
+    .icon-leave.font-18{
+        font-size: 24px;
+    }
+    .font-17{
+        font-size: 21px;
+    }
+    .font-16{
+        font-size: 20px;
+    }
+    .font-15,h5, .h5{
+        font-size: 19px;
+    }
+    .font-14{
+        font-size: 18px;
+    }
+    .font-13{
+        font-size: 16px;
+    }
+    .font-12,h6, .h6{
+        font-size: 15px;
+    }
+    .font-11{
+        font-size: 14px;
+    }
+    .font-10{
+        font-size: 12px;
+    }
+    .font-9{
+        font-size: 11px;
+    }
+    .font-8{
+        font-size: 10px;
+    }
+}
+

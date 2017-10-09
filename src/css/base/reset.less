@@ -1,0 +1,67 @@
+@import '../config/variables.less';
+@import '../config/vendor-prefixes.less';
+
+* {
+  .box-sizing(border-box);
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre,
+form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0;
+  font-weight:normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset, img,button,input,textarea {
+  border: 0;
+  outline:none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+caption, th {
+  text-align: left;
+}
+
+a {
+  text-decoration: none;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.bodyUnScroll {
+  overflow: hidden;
+
+}
+
+button,input,input[type=button], input[type=reset], input[type=submit] {
+  .appearance(button);
+  cursor: pointer;
+}
+input,
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="number"] {
+  -webkit-appearance: none;
+  appearance: none;
+  line-height: normal;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  .appearance(none);
+}
+input[type="number"]::-webkit-outer-spin-button {
+  .appearance(none);
+}
+textarea {
+  resize: none;
+}
